@@ -1,0 +1,24 @@
+HTML syntax centers on the use of elements, which use opening and closing tags to structure content. The browser interprets these tags to display the content as a web page. 
+
+Core Syntax Components!!
+
+Tags: Tags are keywords enclosed in angle brackets (e.g., <p>). Most elements have an opening tag ( <tagname> ) and a closing tag ( </tagname> ).
+Content: The information displayed on the web page is placed between the opening and closing tags (e.g., <p>This is a paragraph.</p>).
+Elements: An entire component, from the opening tag, through the content, to the closing tag, is called an element.
+Attributes: Attributes provide additional information about an element and are included within the opening tag. They consist of a name and a value (e.g., <a href="https://example.com">Link</a>). Values should be enclosed in double quotes for best practice.
+Nesting: Elements must be correctly nested, meaning an inner element must be closed before its parent element (e.g., <strong><em>Correct</em></strong>, not <strong><em>Incorrect</strong></em>).
+Void Elements: Some elements, like images ( <img> ), line breaks ( <br> ), and horizontal rules ( <hr> ), are "void elements" or "empty elements" and do not wrap content, so they only have an opening tag and no closing tag. 
+
+<> - opening tag 
+</> -  closing tag
+
+TAGS
+<p></p> - paragraph
+<button> </button> - buttons
+<a></a>- anchor elemet (link to another website)
+
+SYNTAX
+href="link" - put the link
+
+
+HTML Attribute = modifies how an element behaves
