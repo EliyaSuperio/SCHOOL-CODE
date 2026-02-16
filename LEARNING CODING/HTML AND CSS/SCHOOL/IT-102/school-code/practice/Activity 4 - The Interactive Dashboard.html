@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Handling Dashboard</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            transition: background-color 0.3s ease; /* Smooth color change [cite: 135] */
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #secretMessage {
+            display: none; /* Hidden by default  */
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Interactive Dashboard</h1>
+
+        <div class="section">
+            <h3>1. Live Name Logger</h3>
+            <input type="text" id="inputBox" placeholder="Type your name...">
+            <p id="nameDisplay">You are typing:</p>
+        </div>
+
+        <div class="section">
+            <h3>2. Toggle Secret Message</h3>
+            <button id="toggleBtn">Show Secret Message</button>
+            <p id="secretMessage">JavaScript Events are powerful! [cite: 220]</p>
+        </div>
+
+        <!-- <div id="hoverText">
+            <p>Home</p>
+            <p>Profile</p>
+            <p>Settings</p>
+        </div> -->
+    </div>
+
+    <script>
+        // TASK 1: keydown using addEventListener 
+        const inputBox = document.getElementById("inputBox");
+        const nameDisplay = document.getElementById("nameDisplay");
+
+        inputBox.addEventListener("keydown", function(event) {
+            nameDisplay.textContent = "You are typing: " + event.key;
+
+            
+        // inputBox.addEventListener("keydown", function(event) {
+
+        //     nameDisplay.textContent = "You are typing: " + inputBox.value;
+        //     // Your code here: update nameDisplay.textContent
+        });
+
+        // TASK 2: onclick using JavaScript Property [cite: 130, 132]
+        const toggleBtn = document.getElementById("toggleBtn");
+        const secretMessage = document.getElementById("secretMessage");
+
+        toggleBtn.onclick = function() {
+            let text = document.getElementById("secretMessage");
+            text.style.display = text.style.display === "none" ? "block" : "none"; 
+        // Your code here: toggle display between 'block' and 'none'
+        };
+
+        // TASK 3: resize using Window Event 
+        window.onresize = function() {
+
+        if (window.outerHeight >= screen.availHeight && window.outerWidth >= screen.availWidth) { 
+            document.body.style.backgroundColor = "white"; 
+        } else { 
+            document.body.style.backgroundColor = "lightgray"; 
+        }
+        };
+        // Your code here: change document.body.style.backgroundColor [cite: 99]
+
+        //Task 4: Interactive List (Mouse Events)
+        // document.getElementById("hoverText").addEventListener("mouseover", function() {
+        // this.style.color = "red";
+        // });
+        // document.getElementById("hoverText").addEventListener("mouseout", function() {
+        // this.style.color = "pink";
+        // });
+    </script>
+
+</body>
+</html>
