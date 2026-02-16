@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <img id="myImage" src="haley2.png">
+  <img id="myImage" src="" width="200px"> <br>
+  
+  <button onclick="alert('Hello')">Click Me</button>
+  
+  <p onclick="this.innerHTML='Text changed!'">Click this text</p>
+
+  <button onclick="document.body.style.backgroundColor='pink'">Change Background</button>
+
+  
+  <br>
+  <button id="btn">Press</button>
+  <br>
+
+
+  <p id="hoverText">Hover over me</p>
+
+  <input type="text" id="inputBox" placeholder="Type something">
+
+  <hr><br>
+  <div id="message"></div>
+
+  
+  <p id="text">Hello, I am visible!</p>
+  <button id="toggleBtn">Hide</button>
+</body>
+
+<script>
+
+    //Toggle text visibility
+    document.getElementById("toggleBtn").addEventListener('click', function() {
+    let text = document.getElementById("text");
+    text.style.display = text.style.display === "none" ? "block" : "none"; 
+  });
+
+  window.addEventListener('resize', function(event){
+    console.log("Asd" + window.innerWidth);
+
+    if(window.innerWidth < 700) {
+      document.body.style.backgroundColor = "green";
+    } else {
+      document.body.style.backgroundColor = "royalblue";
+    }
+  });
+
+
+  //Show alert when button is clicked
+  document.getElementById("btn").addEventListener('click', function(){
+    
+    alert("Ashley Jose");
+  });
+
+  // Change image when clicked 
+  document.getElementById("myImage").onclick = function() {
+		this.src = "haley3.png";
+    
+	};
+
+
+
+  //Change background color on hover
+  document.getElementById("hoverText").addEventListener("mouseover", function() {
+    this.style.color = "red";
+  });
+  document.getElementById("hoverText").addEventListener("mouseout", function() {
+    this.style.color = "pink";
+  });
+
+  //Keypress event (logs pressed key)
+  document.getElementById("inputBox").addEventListener("keydown", function(event) {
+		console.log("Key pressed: " + event.key);
+	});
+
+  window.onload = function () {
+    alert("welcome! The page is fully loaded")
+  }
+  window.onload = function () {
+    document.getElementById("message").innerHTML ="Page has loaded!";
+    alert("welcome! The page is fully loaded")
+  }
+
+  function loadDashboard() {
+    document,getElementById("message").innerHTML ="Page has loaded!";
+    document.body.style.backgroundColor = ""
+  }
+</script>
+  
+</html>
